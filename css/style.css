@@ -1,0 +1,216 @@
+/* CSS Conf */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Header */
+
+header {
+    padding: 15px 2% 30px 2%;
+    background-color: #f0f0f1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container img {
+    width: 160px;
+    height: 60px;
+}
+
+
+
+/* Banner */
+
+section .cover-form {
+    width: 100%;
+    padding: 0 2%;
+}
+
+.cover-form .bg {
+    height: 560px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../images/bg-form.jpg");
+    position: relative;
+}
+
+/* Form */
+
+.form-container {
+    position: absolute;
+    right: 40px;
+    width: 400px;
+    top: -2.5%;
+    height: 105%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.233);
+}
+
+.form-container h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: normal;
+    background-color: rgb(234, 236, 239);
+    padding: 30px 15px;
+}
+
+
+.form-container form {
+    margin-top: 8px;
+    padding: 20px;
+}
+
+.form-container form input[type=text]{
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 45px;
+    padding-left: 10px;
+}
+
+.form-container form .form-input:not(:first-child) {
+    margin-top: 40px;
+}
+
+.form-container form input[type=submit] {
+    background-color: #033c50;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    cursor: pointer;
+    border: 0;
+}
+
+.form-container form p:last-child {
+    margin: 20px 0px;
+}
+
+/* chamada */
+
+.chamada {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f1f0f0;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+.chamada p, h2 {
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+}
+
+.chamada h2 {
+    color: rgb(15, 49, 112);
+    font-size: 28px;
+    font-weight: normal;
+}
+
+/* mosaico */
+
+.flex-mosaico {
+    display: flex;
+    text-align: justify;
+}
+
+.imagem {
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+}
+
+.texto {
+    padding: 60px;
+    width: 40%;
+    background-color: #033c50;
+    line-height: 1.6;
+    color: #fff;
+}
+
+footer {
+    
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin-top: 8px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 680px) {
+
+    .flex-mosaico {
+        display: block;
+        border-bottom: 2px solid #fff;
+    }
+
+    .imagem {
+        padding-top: 70%;
+        width: 100%;
+    }
+
+    .texto {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    header .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .container img {
+        margin: 15px 0px;
+    }
+
+    .chamada h2 {
+        font-size: 24px;
+    }
+
+    .chamada p {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    .bg {
+        height: auto;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .form-container {
+        width: 96%;
+        height: auto;
+        max-width: 400px;
+        position: static;
+        display: inline-block;
+        margin-top: -55px;
+    }
+}
